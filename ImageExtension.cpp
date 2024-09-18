@@ -168,12 +168,10 @@ ImageExtension::~ImageExtension(){
 
 
 void ImageExtension::_bind_methods(){
-    if (!ClassDB::is_method_bound("ImageExtension", "convert_image_to_occluder")) {
-        ClassDB::bind_method(D_METHOD("convert_image_to_occluder"), &ImageExtension::convert_image_to_occluder);
-        ClassDB::bind_method(D_METHOD("brush_to_image_with_pos"), &ImageExtension::brush_to_image_with_pos);
-        ClassDB::bind_method(D_METHOD("add_brush_to_image"), &ImageExtension::add_brush_to_image);
-        ClassDB::bind_method(D_METHOD("occluder"), &ImageExtension::occluder);
-        ClassDB::bind_method(D_METHOD("count_image_pixel"), &ImageExtension::count_image_pixel);
-        ClassDB::bind_method(D_METHOD("get_image_border"), &ImageExtension::get_image_border);
-    }
+    ClassDB::bind_method(D_METHOD("convert_image_to_occluder"), &ImageExtension::convert_image_to_occluder);
+    ClassDB::bind_method(D_METHOD("brush_to_image_with_pos"), &ImageExtension::brush_to_image_with_pos);
+    ClassDB::bind_method(D_METHOD("add_brush_to_image"), &ImageExtension::add_brush_to_image);
+    ClassDB::bind_method(D_METHOD("occluder"), &ImageExtension::occluder);
+    ClassDB::bind_method(D_METHOD("count_image_pixel"), &ImageExtension::count_image_pixel);
+    ClassDB::bind_method(D_METHOD("get_image_border"), &ImageExtension::get_image_border);
 }
